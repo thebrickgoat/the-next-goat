@@ -18,7 +18,7 @@ export default function Hero(props) {
 
     return (
         <Draggable bounds="parent">
-            <div style={{top:`${props.top}px`}} className='absolute w-[100px]  select-none cursor-pointer' onDoubleClick={handleDoubleClick}>
+            <div style={{top:`${props.top}%`, left:`${props.left}%`}} className='absolute w-[100px] m-8  select-none cursor-pointer' onDoubleClick={handleDoubleClick}>
                 <img src={props.img} className='select-none pointer-events-none w-full' />
                 <div className='text-center text-white win98popupText'>
                     {props.name}

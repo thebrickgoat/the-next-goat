@@ -1,7 +1,7 @@
 export default function Skills() {
     return (
         <section id="Skills" className="p-8 text-white bg-skills-500">
-            <h2 className='py-2 font-bold text-6xl'>SKILLS</h2>
+            <h2 className='pb-8 font-bold text-6xl'>SKILLS</h2>
             <div className="flex">
                 <div className="w-1/2">
                     <p>

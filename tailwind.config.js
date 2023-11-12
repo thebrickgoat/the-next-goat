@@ -17,7 +17,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-
+        'contact': '#fe875f',
         'windows': {
           '50': '#eefffc',
           '100': '#c5fffa',
@@ -57,7 +57,6 @@ module.exports = {
           '900': '#6d3c16',
           '950': '#3f1e09',
         },
-
 
       }
     },
