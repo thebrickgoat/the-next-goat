@@ -1,21 +1,27 @@
-import Image from 'next/image'
 import Hero from './components/hero'
-import About from './components/about'
 import Skills from './components/skills'
 import Work from './components/work'
+import About from './components/about'
 import Contact from './components/contact'
+import Header from './components/header'
+import Footer from './components/footer'
 
 export default function Home() {
   return (
     <div>
-      <header></header>
+      <header>
+        <Header/>
+      </header>
       <main>
         <Hero/>
         <Skills/>
         <Work/>
+        <About/>
         <Contact/>
       </main>
-      <footer></footer>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   )
 }

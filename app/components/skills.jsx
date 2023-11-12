@@ -1,7 +1,11 @@
+'use client'
+
+import MyThreeComponent from './three';
+
 export default function Skills() {
     return (
-        <section id="Skills" className="p-8 text-white bg-skills-500">
-            <h2 className='pb-8 font-bold text-6xl'>SKILLS</h2>
+        <section id="Skills" className="scroll-mt-16 py-16 px-8 text-white bg-skills-500">
+            <h2 className='pb-4 font-bold text-6xl'>SKILLS</h2>
             <div className="flex">
                 <div className="w-1/2">
                     <p>
@@ -10,7 +14,7 @@ export default function Skills() {
 
                 </div>
                 <div className="w-1/2">
-
+                    <MyThreeComponent />
                 </div>
             </div>
         </section>
