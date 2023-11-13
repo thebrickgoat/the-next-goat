@@ -6,7 +6,7 @@ export default function Skills() {
             <div className="flex">
                 <div className="w-full">
                     <p>
-                    I am a skilled developer adept in React, Vue, and Shopify and seamlessly integrate these technologies to create top-notch user experiences. I excel in building dynamic interfaces with React, leverage Vue.js for modular components and efficient navigation, and harness Shopify's capabilities for robust e-commerce solutions. With a comprehensive skillset spanning coding, UX design, and deployment workflows, this developer crafts cohesive digital experiences that prioritize both functionality and aesthetics.
+                    I am a skilled developer adept in React, Vue, and Shopify and seamlessly integrate these technologies to create top-notch user experiences. I excel in building dynamic interfaces with React, leverage Vue.js for modular components and efficient navigation, and harness Shopify&apos;s capabilities for robust e-commerce solutions. With a comprehensive skillset spanning coding, UX design, and deployment workflows, this developer crafts cohesive digital experiences that prioritize both functionality and aesthetics.
                     </p>
                 </div>
             </div>

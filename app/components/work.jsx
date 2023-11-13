@@ -18,7 +18,7 @@ export default function Work() {
             <div className="py-16 px-8 pb-4">
                 <h2 className="pb-4 font-bold text-6xl">PROJECTS AND WORKS</h2>
                 <p>
-                Embark on a journey through thebrickgoat's portfolio and discover a world where technology meets creativity in perfect harmony. With a commitment to excellence and a passion for pushing the boundaries, thebrickgoat is not just a developer; they are a visionary crafting the future of digital experiences.
+                Embark on a journey through thebrickgoat&apos;s portfolio and discover a world where technology meets creativity in perfect harmony. With a commitment to excellence and a passion for pushing the boundaries, thebrickgoat is not just a developer; they are a visionary crafting the future of digital experiences.
                 </p>
             </div>
             <div className="flex flex-wrap gap-4 p-8 pt-4">
