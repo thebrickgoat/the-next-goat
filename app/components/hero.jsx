@@ -6,7 +6,7 @@ import Movable from './movableIcon';
 import { useState } from 'react';
 
 export default function Hero() {
-    const [popupOpen, setShowPopup] = useState();
+    const [popupOpen, setShowPopup] = useState(true);
     const closePopup = () => {
         setShowPopup(false);
     }
@@ -15,12 +15,12 @@ export default function Hero() {
     }
 
     return (
-        <section className="relative overflow-hidden">
-            <Movable top="0" img="/icons/contact.png" name="Contact" link="Contact" />
-            <Movable top="20" img="/icons/skills.png" name="Skills and Talents" link="Skills" />
-            <Movable top="45" img="/icons/work.jpg" name="Work/Portfolio" link="Work" />
-            <Movable left="10" top="2" img="/horse.png" name="HorseSlap.exe" link="Horse" openPopup={openPopup} />
-
+        <section className="relative overflow-hidden z-40 bg-windows-700 h-screen" >
+            <Movable img="/icons/about.png" name="About Me" link="About" />
+            <Movable img="/icons/skills.png" name="Skills and Talents" link="Skills" />
+            <Movable img="/icons/work.png" name="Work/Portfolio" link="Work" />
+            <Movable img="/icons/contact.png" name="Contact" link="Contact" />
+            <Movable img="/horse.png" name="HorseSlap.exe" link="Horse" openPopup={openPopup} />
             {popupOpen && (
                 <Draggable handle=".bar" bounds="parent">
                     <div className="absolute top-0 right-0 m-6 w-1/3 h-1/3 select-none	">
@@ -37,8 +37,8 @@ export default function Hero() {
                 </Draggable>
             )}
 
-            <div className="flex flex-col justify-end items-start h-screen bg-windows-700 p-8 text-white">
-                <h1 className="font-baskerville font-bold text-8xl mb-4">thebrickgoat</h1>
+            <div className="absolute bottom-0 bg-windows-700 p-8 text-white">
+                <h1 className="font-baskerville font-bold tracking-widetext-4xl md:text-8xl mb-4">thebrickgoat</h1>
                 <p className="text-2xl mb-8">im just out here trusting god 🙏</p>
             </div>
         </section>

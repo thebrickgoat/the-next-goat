@@ -1,19 +1,21 @@
 'use client'
 
-import MyThreeComponent from './three';
+import MyThreeComponent from './physics/physics';
 
 export default function About() {
     return (
-        <section id="Skills" className="scroll-mt-16 py-16 px-8 text-white bg-skills-500">
-            <h2 className='pb-4 font-bold text-6xl'>ABOUT</h2>
-            <div className="flex">
+        <section id="Skills" className="relative scroll-mt-16 py-16 px-8 text-white min-h-[40vh]">
+            <h2 className='pb-4 relative font-bold text-6xl z-20'>ABOUT ME</h2>
+            <div className='absolute top-0 left-0 w-full h-full bg-white z-10'>
+                <MyThreeComponent />
+            </div>
+            <div className="flex relative pointer-events-none z-20">
 
-                <div className="w-1/2">
-                    <MyThreeComponent />
+                <div className="hidden md:block w-3/4">
                 </div>
-                <div className="w-1/2">
+                <div className="w-full md:w-1/4 pb-8  ">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, leo tincidunt vehicula sagittis, massa mi hendrerit lorem, ac condimentum nisi diam sed arcu. Suspendisse velit diam, mattis nec sagittis sed, viverra a purus. Proin nisi libero, eleifend sed vehicula a, volutpat id metus. Donec vel pellentesque ligula. In sed purus augue. Mauris tempus consequat dolor, ut venenatis leo semper sit amet. Nam in maximus quam. Etiam id urna in enim imperdiet venenatis a quis diam. Aliquam rhoncus risus ut velit ultrices aliquam. Quisque id ante hendrerit, auctor elit non, vulputate felis. Donec tincidunt finibus erat et posuere. Fusce scelerisque justo sit amet orci egestas feugiat. Nunc id sagittis lorem. Nam eu tristique magna.
+                        I am the kind of person that throws themselves into there work. So much so that they would would spend alot of free time learning how to make this 3d scene just to make that joke rather than do anything that might be considered productive. 
                     </p>
 
                 </div>

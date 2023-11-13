@@ -1,20 +1,14 @@
-'use client'
-
-import MyThreeComponent from './three';
 
 export default function Skills() {
     return (
         <section id="Skills" className="scroll-mt-16 py-16 px-8 text-white bg-skills-500">
-            <h2 className='pb-4 font-bold text-6xl'>SKILLS</h2>
+            <h2 className='pb-4 font-bold text-6xl'>SKILLSET</h2>
             <div className="flex">
-                <div className="w-1/2">
+                <div className="w-full">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, leo tincidunt vehicula sagittis, massa mi hendrerit lorem, ac condimentum nisi diam sed arcu. Suspendisse velit diam, mattis nec sagittis sed, viverra a purus. Proin nisi libero, eleifend sed vehicula a, volutpat id metus. Donec vel pellentesque ligula. In sed purus augue. Mauris tempus consequat dolor, ut venenatis leo semper sit amet. Nam in maximus quam. Etiam id urna in enim imperdiet venenatis a quis diam. Aliquam rhoncus risus ut velit ultrices aliquam. Quisque id ante hendrerit, auctor elit non, vulputate felis. Donec tincidunt finibus erat et posuere. Fusce scelerisque justo sit amet orci egestas feugiat. Nunc id sagittis lorem. Nam eu tristique magna.
+                    I am a skilled developer adept in React, Vue, and Shopify and seamlessly integrate these technologies to create top-notch user experiences. They excel in building dynamic interfaces with React, leverage Vue.js for modular components and efficient navigation, and harness Shopify's capabilities for robust e-commerce solutions. With a comprehensive skillset spanning coding, UX design, and deployment workflows, this developer crafts cohesive digital experiences that prioritize both functionality and aesthetics.
                     </p>
 
-                </div>
-                <div className="w-1/2">
-                    <MyThreeComponent />
                 </div>
             </div>
         </section>
