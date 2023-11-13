@@ -1,3 +1,5 @@
+'use client'
+
 // Import necessary dependencies
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';

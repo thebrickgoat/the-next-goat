@@ -1,6 +1,6 @@
 'use client'
 
-import MyThreeComponent from './three';
+import MyThreeComponent from './physics/physics';
 
 export default function About() {
     return (
