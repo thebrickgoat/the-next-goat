@@ -44,11 +44,11 @@ export default function Slap(props) {
     return (
         <div className='m-6'>
             <div>
-                <Image width="180" height="180" alt="better slap that horse "className='w-full select-none'  draggable="false" src='/horse.png' onKeyDown={handleSlap} onClick={handleSlap} tabIndex="1"/>
+                <Image width="180" height="180" alt="better slap that horse "className='w-full select-none'  draggable="false" src='/horse.png' onKeyDown={handleSlap} onClick={handleSlap} tabIndex="0"/>
             </div>
-            <div >
-                <p className='text-center'>Your Slaps: {slaps}</p>
-                <p className='text-center'>World Slaps: {wordSlaps}</p>
+            <div className="mt-4" >
+                <p className='text-center text-gray-800'>Your Slaps: {slaps}</p>
+                <p className='text-center text-gray-800'>World Slaps: {wordSlaps}</p>
             </div>
         </div>
     )
