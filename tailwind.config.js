@@ -18,6 +18,7 @@ module.exports = {
       colors: {
         'white': '#fcf5f9',
         'contact': '#fe875f',
+        'about': '#e12669',
         'windows': {
           '50': '#eefffc',
           '100': '#c5fffa',

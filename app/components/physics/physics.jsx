@@ -32,10 +32,8 @@ export default function App() {
     
   }, [])  
   return (
-    <Canvas ref={canvasRef} dpr={[1, 2]} shadows camera={{ position: [-40, 40, 40], fov: 10, near: 1, far: 100 }}>
-   
-      <color attach="background" args={['#e12669']} />
-      <fog attach="fog" args={['#e12669', 60, 90]} />
+    <Canvas style={{ background: "#e12669" }} ref={canvasRef} dpr={[1, 2]} shadows camera={{ position: [-40, 40, 40], fov: 10, near: 1, far: 100 }}>
+         <fog attach="fog" args={['#e12669', 60, 90]} />
       <ambientLight intensity={3} />
       <Physics isPaused={physicsEnabled} allowSleep={true} iterations={15} gravity={[0, -200, 0]}>
         <group position={[0, 0, 0]}>

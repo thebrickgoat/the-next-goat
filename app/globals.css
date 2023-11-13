@@ -82,3 +82,32 @@ body {
 .win98popup .bar button svg {
   margin: 3px 3px 3px 4px;
 }
+
+.wave{
+  position: relative;
+
+}
+.wave::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 10px;
+  background-size: 20px 20px;
+  background-image:
+   radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
+}
+.wave::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 15px;
+  background-size: 40px 20px;
+  background-image:
+    radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
+}

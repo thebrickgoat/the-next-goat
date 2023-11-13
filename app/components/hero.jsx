@@ -16,7 +16,7 @@ export default function Hero() {
     }
 
     return (
-        <section className="relative overflow-hidden z-40 bg-windows-700 h-screen" >
+        <section className="relative overflow-hidden z-40 bg-windows-700" >
             <Movable img="/icons/about.png" name="About Me" link="About" />
             <Movable img="/icons/skills.png" name="Skills and Talents" link="Skills" />
             <Movable img="/icons/work.png" name="Work/Portfolio" link="Work" />
@@ -39,8 +39,8 @@ export default function Hero() {
             )}
 
             <div className="bg-windows-700 p-8 text-white">
-                <h1 className="font-bold tracking-wide text-4xl md:text-8xl mb-4">thebrickgoat</h1>
-                <p className="text-2xl mb-8">im just out here trusting god 🙏</p>
+                <h1 className="font-windows font-bold tracking-wide text-4xl md:text-8xl mb-4">thebrickgoat</h1>
+                <p className="font-windows text-2xl mb-8">im just out here trusting god 🙏</p>
             </div>
         </section>
         
