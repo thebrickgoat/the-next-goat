@@ -14,6 +14,7 @@ export default function Home() {
       </header>
       <main>
         <Hero/>
+        <About/>
         <Skills/>
         <Work/>
         <Contact/>
