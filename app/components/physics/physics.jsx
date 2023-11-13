@@ -15,7 +15,6 @@ export default function App() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setPhysicsEnabled(false)
-          console.log(physicsEnabled)
         }
       },
       { rootMargin: '0px', threshold: 0.5 }

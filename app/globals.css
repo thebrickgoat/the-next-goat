@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @font-face { 
   font-family: "windows"; 
   src: url("/fonts/W95FA.otf"); 
+  font-display: swap;
 }
 @tailwind base;
 @tailwind components;
@@ -30,14 +30,14 @@ body {
     rgb(var(--background-start-rgb));
 } 
 .win98popupText{
-  font-family: "windows", sans-serif;
+  font-family: "windows", serif;
 }
 .win98popup {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  font-family: "windows", sans-serif;
+  font-family: "windows", serif;
   background: #c2c6ca;
   font-size: 12px;
   box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;

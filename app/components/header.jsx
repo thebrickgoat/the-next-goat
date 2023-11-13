@@ -1,5 +1,6 @@
-'use client'
+"use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,19 +16,40 @@ export default function Header() {
         className="text-2xl hover:text-gray-500 md:hidden"
         onClick={toggleMenu}
       >
-          <img alt='menu toggle' src="/logo.png" width="48" height="48" className={isMenuOpen ? 'rotate-0' : 'rotate-180'} onClick={toggleMenu} style={{ transition: 'transform 0.3s ease' }} />
-        </button>
+        <Image
+          alt="menu toggle"
+          src="/logo.png"
+          width="48"
+          height="48"
+          className={isMenuOpen ? "rotate-0" : "rotate-180"}
+          onClick={toggleMenu}
+          style={{ transition: "transform 0.3s ease" }}
+        />
+      </button>
       <nav
-        className={`${isMenuOpen ? "flex" : "hidden"
-          } md:flex md:items-center w-full md:w-auto`}
+        className={`${
+          isMenuOpen ? "flex" : "hidden"
+        } md:flex md:items-center w-full md:w-auto`}
       >
-        <a onClick={toggleMenu} href="#Skills" className="text-2xl hover:text-gray-500 block md:inline-block">
+        <a
+          onClick={toggleMenu}
+          href="#Skills"
+          className="text-2xl hover:text-gray-500 block md:inline-block"
+        >
           skills
         </a>
-        <a onClick={toggleMenu} href="#Work" className="text-2xl hover:text-gray-500 block md:inline-block ml-4">
+        <a
+          onClick={toggleMenu}
+          href="#Work"
+          className="text-2xl hover:text-gray-500 block md:inline-block ml-4"
+        >
           work
         </a>
-        <a onClick={toggleMenu} href="#Contact" className="text-2xl hover:text-gray-500 block md:inline-block ml-4">
+        <a
+          onClick={toggleMenu}
+          href="#Contact"
+          className="text-2xl hover:text-gray-500 block md:inline-block ml-4"
+        >
           contact
         </a>
       </nav>

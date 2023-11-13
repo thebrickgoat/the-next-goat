@@ -1,4 +1,5 @@
 'use client'
+
 import Horse from './slap';
 import Draggable from 'react-draggable';
 import Movable from './movableIcon';
@@ -38,7 +39,7 @@ export default function Hero() {
             )}
 
             <div className="bg-windows-700 p-8 text-white">
-                <h1 className="font-baskerville font-bold tracking-wide text-4xl md:text-8xl mb-4">thebrickgoat</h1>
+                <h1 className="font-bold tracking-wide text-4xl md:text-8xl mb-4">thebrickgoat</h1>
                 <p className="text-2xl mb-8">im just out here trusting god 🙏</p>
             </div>
         </section>

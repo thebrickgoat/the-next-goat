@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'baskerville': ['Libre Baskerville', 'serif'],
         'windows': ['windows', 'serif']
       },
       backgroundImage: {

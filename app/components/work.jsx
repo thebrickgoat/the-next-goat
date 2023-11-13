@@ -1,13 +1,14 @@
 "use client"
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Work() {
     const cards = [
-        { id: 1, title: "Card 1", image: "https://picsum.photos/300/300", body: "test", categories: ["Category 1", "Category 2"], tags: ["tag1", "tag2", "tag3"] },
-        { id: 2, title: "Card 2", image: "https://picsum.photos/300/300?test=1", categories: ["Category 2"], tags: ["tag1", "tag2", "tag3"] },
-        { id: 3, title: "Card 3", image: "https://picsum.photos/300/300?test=3", categories: ["Category 1", "Category 2"], tags: ["tag1", "tag2", "tag3"] },
-        { id: 4, title: "Card 4", image: "https://picsum.photos/300/300?test=2", categories: ["Category 1"], tags: ["tag1", "tag2", "tag3"] },
+        { id: 1, title: "Card 1", image: "/testPic.jpg", body: "test", categories: ["Category 1", "Category 2"], tags: ["tag1", "tag2", "tag3"] },
+        { id: 2, title: "Card 2", image: "/testPic.jpg", categories: ["Category 2"], tags: ["tag1", "tag2", "tag3"] },
+        { id: 3, title: "Card 3", image: "/testPic.jpg", categories: ["Category 1", "Category 2"], tags: ["tag1", "tag2", "tag3"] },
+        { id: 4, title: "Card 4", image: "/testPic.jpg", categories: ["Category 1"], tags: ["tag1", "tag2", "tag3"] },
         // Add more cards as needed
     ];
 
@@ -33,7 +34,7 @@ export default function Work() {
                 <div className={`mx-auto p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8`} >
                     {cards.filter(card => selectedCategory === "All" || card.categories.includes(selectedCategory)).map(card => (
                         <div key={card.id} className="flex flex-col p-4 shadow-2xl bg-white transition-opacity duration-500 ease-in-out">
-                            <img src={card.image} alt={card.title} className="w-full object-cover" />
+                            <Image src={card.image} alt={card.title} width={300} height={300} className="w-full object-cover" />
                             <h2 className="text-xl text-gray-800 font-bold mt-4">{card.title}</h2>
                             <p className="text-gray-600">{card.category}</p>
                             <p className="mt-2 text-gray-500">{card.body}</p>

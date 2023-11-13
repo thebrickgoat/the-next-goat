@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
+import Image from "next/image";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -11,10 +12,15 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default function Slap(props) {
     const [slaps, setSlaps] = useState(0);
     const [wordSlaps, setWorldSlaps] = useState('loading...');
-    const horse = new Audio('/sounds/horse1.mp3');
-    const horse2 = new Audio('/sounds/horse2.mp3');
+    const [slap, setSlapAudio] = useState(null)
+    const [horse, setHorseAudio] = useState(null)
+    const [horse2, setHorse2Audio] = useState(null)
 
     useEffect(() => {
+        setHorseAudio(new Audio('/sounds/horse1.mp3'));
+        setHorse2Audio(new Audio('/sounds/horse2.mp3'));
+        setSlapAudio(new Audio('/sounds/slap.mp3'));
+
         async function fetchSlaps() {
             const { data, error } = await supabase
                 .from('slaps')
@@ -27,9 +33,8 @@ export default function Slap(props) {
     }, []);
 
     const handleSlap = async () => {
-        const slap = new Audio('/sounds/slap.mp3');
-        slap.play();
         const randomHorse = Math.random() < 0.2 ? horse : null;
+        slap?.play();
         randomHorse?.play();
         setSlaps(slaps + 1);
         setWorldSlaps(wordSlaps + 1);
@@ -39,7 +44,7 @@ export default function Slap(props) {
     return (
         <div className='m-6'>
             <div>
-                <img  alt="better slap that horse "className='w-full select-none'  draggable="false" src='/horse.png' onKeyDown={handleSlap} onClick={handleSlap} tabIndex="1"/>
+                <Image width="180" height="180" alt="better slap that horse "className='w-full select-none'  draggable="false" src='/horse.png' onKeyDown={handleSlap} onClick={handleSlap} tabIndex="1"/>
             </div>
             <div >
                 <p className='text-center'>Your Slaps: {slaps}</p>
