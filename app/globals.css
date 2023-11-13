@@ -1,8 +1,9 @@
-@font-face { 
-  font-family: "windows"; 
-  src: url("/fonts/W95FA.otf"); 
+@font-face {
+  font-family: "windows";
+  src: url("/fonts/W95FA.otf");
   font-display: swap;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,18 +21,18 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} 
-.win98popupText{
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.win98popupText {
   font-family: "windows", serif;
 }
+
 .win98popup {
   display: flex;
   flex-flow: column nowrap;
@@ -42,6 +43,7 @@ body {
   font-size: 12px;
   box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;
 }
+
 .win98popup button {
   background: #c2c6ca;
   border: none;
@@ -49,9 +51,11 @@ body {
   border-radius: 0;
   outline: none;
 }
+
 .win98popup .shadow {
   box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px white, inset -1px -1px #85898d;
 }
+
 .win98popup .bar {
   display: flex;
   flex-flow: row nowrap;
@@ -66,28 +70,34 @@ body {
   line-height: normal;
 
 }
+
 .win98popup .bar p {
   margin: 0;
 }
+
 .win98popup .bar button {
   width: 15px;
   height: 13px;
 }
+
 .win98popup .bar button:active {
   box-shadow: 0.5px 0.5px 0 0.5px white, inset 1px 1px black, inset -1px -1px #c2c6ca, inset 2px 2px #85898d;
 }
+
 .win98popup .bar button:active svg {
   transform: translateX(1px) translateY(1px);
 }
+
 .win98popup .bar button svg {
   margin: 3px 3px 3px 4px;
 }
 
-.wave{
+.wave {
   position: relative;
 
 }
-.wave::before{
+
+.wave::before {
   content: "";
   position: absolute;
   left: 0;
@@ -97,9 +107,10 @@ body {
   height: 10px;
   background-size: 20px 20px;
   background-image:
-   radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
+    radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
 }
-.wave::after{
+
+.wave::after {
   content: "";
   position: absolute;
   left: 0;
@@ -110,4 +121,21 @@ body {
   background-size: 40px 20px;
   background-image:
     radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
+}
+
+.skills-selected {
+  border: #f3f071 solid 4px;
+  position: relative;
+}
+
+.skills-selected::after {   
+  content: "1P";
+  position: absolute;
+  font-size: 3rem;
+  color: #f3f071;
+  font-weight: bold;
+  font-style: italic; 
+  top: -2.5rem;
+  left: calc(50% - 2rem);
+  text-shadow: 2px 3px 2px #11476A;
 }
