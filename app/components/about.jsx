@@ -4,7 +4,7 @@ import MyThreeComponent from './physics/physics';
 
 export default function About() {
     return (
-        <section id="Skills" className="relative scroll-mt-16 py-16 px-8 text-white h-screen">
+        <section id="About" className="relative scroll-mt-16 py-32 px-8 text-white h-screen">
             <h2 className='pb-4 relative font-bold text-6xl z-20'>ABOUT ME</h2>
             <div className='absolute top-0 left-0 w-full h-full bg-white z-10'>
                 <MyThreeComponent />

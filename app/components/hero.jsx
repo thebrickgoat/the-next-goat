@@ -16,7 +16,7 @@ export default function Hero() {
     }
 
     return (
-        <section className="relative overflow-hidden z-40 bg-windows-700" >
+        <section className="flex flex-col justify-space-around relative overflow-hidden z-40 bg-windows-700 min-h-screen" >
             <Movable img="/icons/about.png" name="About Me" link="About" />
             <Movable img="/icons/skills.png" name="Skills and Talents" link="Skills" />
             <Movable img="/icons/work.png" name="Work/Portfolio" link="Work" />
@@ -24,7 +24,7 @@ export default function Hero() {
             <Movable img="/horse.png" name="HorseSlap.exe" link="Horse" openPopup={openPopup} />
             {popupOpen && (
                 <Draggable handle=".bar" bounds="parent">
-                    <div className="absolute top-0 right-0 m-6 w-1/3 h-1/3 select-none	">
+                    <div className="absolute top-0 right-0 m-6 w-1/2 h-1/2 select-none">
                         <div className="win98popup shadow ">
                             <div className="bar">
                                 <p>HorseSlap</p>

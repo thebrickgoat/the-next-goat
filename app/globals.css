@@ -31,6 +31,8 @@ body {
 
 .win98popupText {
   font-family: "windows", serif;
+  text-shadow: 1px 2px black;
+
 }
 
 .win98popup {
@@ -124,18 +126,21 @@ body {
 }
 
 .skills-selected {
-  border: #f3f071 solid 4px;
+  border: #f8d838 solid 4px;
   position: relative;
+  animation: blinker 1s linear infinite;
 }
 
-.skills-selected::after {   
-  content: "1P";
+@keyframes blinker {
+  50% {
+    border-color: #2f7db9;
+  }
+}
+
+.skills-selected::after {
+  content: url("/skills/1p.png");
   position: absolute;
-  font-size: 3rem;
-  color: #f3f071;
   font-weight: bold;
-  font-style: italic; 
-  top: -2.5rem;
-  left: calc(50% - 2rem);
-  text-shadow: 2px 3px 2px #11476A;
+  font-style: italic;
+  top: 0.5rem;
 }
