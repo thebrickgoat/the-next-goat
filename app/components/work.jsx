@@ -31,7 +31,7 @@ export default function Work() {
                 {/* Add more filters as needed */}
             </div>
             <div className={`transition-color duration-500 ease-in-out ${selectedCategory === "All" ? "bg-work-400" : selectedCategory === "Category 1" ? "bg-work-500" : selectedCategory === "Category 2" ? "bg-work-600" : selectedCategory === "Category 3" ? "bg-work-700" :"bg-work-800"}`}>
-                <div className={`mx-auto p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8`} >
+                <div className="mx-auto py-16 px-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8" >
                     {cards.filter(card => selectedCategory === "All" || card.categories.includes(selectedCategory)).map(card => (
                         <div key={card.id} className="flex flex-col p-4 shadow-2xl bg-white transition-opacity duration-500 ease-in-out">
                             <Image src={card.image} alt={card.title} width={300} height={300} className="w-full object-cover" />

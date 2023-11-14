@@ -9,7 +9,7 @@ export default function Skills() {
     {
       title: "HTML/CSS/JS",
       description:
-        "10 Years of experience building frontends with HTML, CSS, and JS. From the Dreamweaver days to the modern SPA frameworks, I have built simple landing pages, storefronts wiht stripe, and complex web apps. And hey, sometimes some good markup and a couple of readable styles are all you need to deliver a great experience.",
+        "10 Years of experience building frontends with HTML, CSS, and JS. From the Dreamweaver days to the modern SPA frameworks, I have built simple landing pages, storefronts with stripe, and complex web apps. And hey, sometimes some good markup and a couple of readable styles are all you need to deliver a great experience.",
       image: "/skills/html.svg",
       pips: [{ title: "Expertise", filled: 5 }],
     },
