@@ -3,14 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Work() {
-    const cards = [
-        { id: 1, title: "Card 1", image: "/testPic.jpg", body: "test", categories: ["Category 1", "Category 2"], tags: ["tag1", "tag2", "tag3"] },
-        { id: 2, title: "Card 2", image: "/testPic.jpg", categories: ["Category 2"], tags: ["tag1", "tag2", "tag3"] },
-        { id: 3, title: "Card 3", image: "/testPic.jpg", categories: ["Category 1", "Category 2"], tags: ["tag1", "tag2", "tag3"] },
-        { id: 4, title: "Card 4", image: "/testPic.jpg", categories: ["Category 1"], tags: ["tag1", "tag2", "tag3"] },
-        // Add more cards as needed
-    ];
+export default function Work({work}) {
 
     const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -32,9 +25,9 @@ export default function Work() {
             </div>
             <div className={`transition-color duration-500 ease-in-out ${selectedCategory === "All" ? "bg-work-400" : selectedCategory === "Category 1" ? "bg-work-500" : selectedCategory === "Category 2" ? "bg-work-600" : selectedCategory === "Category 3" ? "bg-work-700" :"bg-work-800"}`}>
                 <div className="mx-auto py-16 px-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8" >
-                    {cards.filter(card => selectedCategory === "All" || card.categories.includes(selectedCategory)).map(card => (
+                    {work.filter(card => selectedCategory === "All" || card.categories.includes(selectedCategory)).map(card => (
                         <div key={card.id} className="flex flex-col p-4 shadow-2xl bg-white transition-opacity duration-500 ease-in-out">
-                            <Image src={card.image} alt={card.title} width={300} height={300} className="w-full object-cover" />
+                            {card.image && <Image src={`/work/${card.image}`} alt={card.title} width={300} height={300} className="w-full object-cover" /> }
                             <h2 className="text-xl text-gray-800 font-bold mt-4">{card.title}</h2>
                             <p className="text-gray-600">{card.category}</p>
                             <p className="mt-2 text-gray-500">{card.body}</p>

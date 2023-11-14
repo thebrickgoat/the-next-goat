@@ -4,61 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Skill from "./skill";
 
-export default function Skills() {
-  const skills = [
-    {
-      title: "HTML/CSS/JS",
-      description:
-        "10 Years of experience building frontends with HTML, CSS, and JS. From the Dreamweaver days to the modern SPA frameworks, I have built simple landing pages, storefronts with stripe, and complex web apps. And hey, sometimes some good markup and a couple of readable styles are all you need to deliver a great experience.",
-      image: "/skills/html.svg",
-      pips: [{ title: "Expertise", filled: 5 }],
-    },
-    {
-      title: "Node.js",
-      description:
-        "5 Years in Node.js trying to geuss what version the person that built this was using, and why it doesn't work on my machine. Yarn, Gulp, Babel, and other critical parts of the tool chain, as well as using express to build APIs. A couple times I even wrote some scripts to update large product dbs overnight while i slept and had panic dreams about the the server timing out and bricking it.",
-      image: "/skills/node.svg",
-      pips: [{ title: "Expertise", filled: 4 }],
-    },
-    {
-      title: "React",
-      description: "3 Years in React not understanding how refs actually work. React changed the game, and i have used it off and on ever since I realized polymer wasn't going anywhere and I didn't much care much for angular. I've leveraged some verson of React in everything from personal projects using expo to complex user state management.",
-      image: "/skills/react.svg",
-      pips: [{ title: "Expertise", filled: 3 }],
-    },
-
-    {
-      title: "Shopify",
-      description:
-        "6 Years in Shopify complaining about the multipage page checkout and the lack of a proper CMS. The platform has come a long way, and I have built everything from simple themes to complex headless setups. I have also built a couple custom apps for the platform, and extensively used the storefront API.",
-      image: "/skills/shopify.svg",
-      pips: [{ title: "Expertise", filled: 5 }],
-    },
-    {
-      title: "Vue.js",
-      description: "3 Years of Vue.js nesting v-ifs and v-fors. I have used vue to build mobile apps leveraging capacitor, used vite to build static sites, and also used it to build a couple shopify themes.",
-      image: "/skills/vue.svg",
-      pips: [{ title: "Expertise", filled: 4 }],
-    },
-    {
-      title: "Next.js",
-      description: "2 Years of Next.js overengineering blogs and talking shit about gatsby. Next.js has always been the most interesting of the subframeworks, and with 14 its becoming even better and really pushing frontend control and preformance foward.",
-      image: "/skills/next.svg",
-      pips: [{ title: "Expertise", filled: 3 }],
-    },
-    {
-      title: "Creative Cloud",
-      description: "10 years of Adobe Products(Illustrator, Photoshop and AfterEffects) slowy dying of feature bloat and anti consumer practices",
-      image: "/skills/cc.svg",
-      pips: [{ title: "Expertise", filled: 5 }],
-    },
-    {
-      title: "git/devops",
-      description: "6 Years of DevOps and git collecting different dotfiles and logins for different services. At this point there are more version control services than fingers on my hands, and I have used all of them at some point or anything in a production capacity. I also know my way around the cli, though these days gitLens does alot of the gorund work for me.",
-      image: "/skills/git.svg",
-      pips: [{ title: "Expertise", filled: 4 }],
-    },
-  ];
+export default function Skills({ skills }) {
 
   const [selectedSkill, setSelectedSkill] = useState(skills[0]);
   const [focusedIndex, setFocusedIndex] = useState(null);
@@ -82,7 +28,6 @@ export default function Skills() {
         } else {
           setFocusedIndex((prevIndex) => {
             const newIndex = prevIndex + skills.length / 2;
-            console.log(newIndex);
             return newIndex > skills.length - 1
               ? prevIndex - skills.length / 2
               : newIndex;
@@ -147,7 +92,7 @@ export default function Skills() {
         <div className="flex flex-col w-full md:w-1/3 border-4 bg-skills-600 border-skills-900 p-8">
           <div className="relative min-h-[250px] mx-auto">
             <Image
-              src={selectedSkill.image.split(".", 1) + ".png"}
+              src={selectedSkill.image}
               alt={selectedSkill.title}
               width={150}
               height={100}
