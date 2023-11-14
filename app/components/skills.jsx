@@ -88,8 +88,8 @@ export default function Skills({ skills }) {
           experiences that prioritize both functionality and aesthetics.
         </p>
       </div>
-      <div className="md:flex items-center gap-16 pt-8">
-        <div className="flex flex-col w-full md:w-1/3 border-4 bg-skills-600 border-skills-900 p-8">
+      <div className="md:flex items-center gap-8 pt-8">
+        <div className="flex flex-col w-full md:w-1/2 border-4 bg-skills-800/75 border-skills-900 p-8">
           <div className="relative min-h-[250px] mx-auto">
             <Image
               src={selectedSkill.image}
@@ -131,7 +131,7 @@ export default function Skills({ skills }) {
           <div className="mt-4">
             <h3 className="pb-4 font-bold text-2xl">{selectedSkill.title}</h3>
             <h3 className="pb-4">{selectedSkill.description}</h3>
-            {selectedSkill.pips?.map((pip, index) => (
+            {selectedSkill.pips?.map(pip => (
               <div key={pip.title} className="flex space-x-2 mb-8 items-center">
                 <div>{pip.title}</div>
                 {Array(5)
@@ -148,7 +148,7 @@ export default function Skills({ skills }) {
             ))}
           </div>
         </div>
-        <div className="flex-col w-full md:w-2/3">
+        <div className="flex-col w-full md:w-1/2">
           <h2 className="pb-8 text-4xl">
             <Image
               src="/skills/choose.png"
