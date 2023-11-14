@@ -104,11 +104,11 @@ export default function Skills() {
                         <h3 className="pb-4 font-bold text-4xl">{selectedSkill.title}</h3>
                         <h3 className="pb-4 text-xl">{selectedSkill.description}</h3>
                         {selectedSkill.pips?.map((pip, index) => (
-                            <div className="flex space-x-2 mt-4 items-center">
+                            <div key={pip.title} className="flex space-x-2 mt-4 items-center">
                                 <div>{pip.title}</div>
                                 {
                                     Array(5).fill(0).map((_, i) => (
-                                        <div className={`w-3 border-white border-2 h-3 ${pip.filled < i + 1 ? "" : "bg-white"} rounded-full`}></div>
+                                        <div key={pip.title + i} className={`w-3 border-white border-2 h-3 ${pip.filled < i + 1 ? "" : "bg-white"} rounded-full`}></div>
                                     ))
                                 }
                             </div>
