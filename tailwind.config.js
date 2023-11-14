@@ -11,7 +11,7 @@ module.exports = {
         'windows': ['windows', 'serif']
       },
       backgroundImage: {
-        'skillLogo':'url("/skills/bg.png")',
+        'skillLogo': 'url("/skills/bg.png")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -34,7 +34,7 @@ module.exports = {
           '900': '#0a5757',
           '950': '#003235',
         },
-        
+
         'skills': {
           '50': '#f1f8fe',
           '100': '#e3effb',
@@ -49,20 +49,18 @@ module.exports = {
           '950': '#0e2a43',
         },
         'work': {
-          '50': '#fffaeb',
-          '100': '#fef1c7',
-          '200': '#fde18a',
-          '300': '#fdcb4c',
-          '400': '#fcb523',
-          '500': '#f6940b',
-          '600': '#da6d05',
-          '700': '#b54b08',
-          '800': '#933a0d',
-          '900': '#78300f',
-          '950': '#451703',
-      },
-      
-
+          '50': '#fffbea',
+          '100': '#fff1c5',
+          '200': '#ffe485',
+          '300': '#ffcf46',
+          '400': '#ffb91b',
+          '500': '#ff9500',
+          '600': '#e26e00',
+          '700': '#bb4a02',
+          '800': '#983908',
+          '900': '#7c2f0b',
+          '950': '#481600',
+        },
       }
     },
   },
