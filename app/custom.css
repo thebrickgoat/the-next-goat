@@ -159,4 +159,16 @@
       transform: scale(0.9);
     }
   }
-  
+
+  .bg-skillLogo{
+    animation: animatedBackground 100s infinite;
+    background-blend-mode: luminosity;
+  }
+  @keyframes animatedBackground {
+    0% {
+      background-position: 1000% 500%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }

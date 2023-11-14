@@ -11,6 +11,7 @@ module.exports = {
         'windows': ['windows', 'serif']
       },
       backgroundImage: {
+        'skillLogo':'url("/skills/bg.png")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

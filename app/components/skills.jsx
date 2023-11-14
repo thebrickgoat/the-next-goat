@@ -71,7 +71,7 @@ export default function Skills({ skills }) {
   return (
     <section
       id="Skills"
-      className={`scroll-mt-16 py-16 px-8 text-white bg-skills-500 ${
+      className={`scroll-mt-16 py-16 px-8 text-white bg-skills-500 bg-skillLogo ${
         selectedSkill.title ? "border-about-500" : ""
       }`}
     >
@@ -129,8 +129,8 @@ export default function Skills({ skills }) {
             <div className="skillShadow bg-skills-900" ></div>
           </div>
           <div className="mt-4">
-            <h3 className="pb-4 font-bold text-4xl">{selectedSkill.title}</h3>
-            <h3 className="pb-4 text-xl">{selectedSkill.description}</h3>
+            <h3 className="pb-4 font-bold text-2xl">{selectedSkill.title}</h3>
+            <h3 className="pb-4">{selectedSkill.description}</h3>
             {selectedSkill.pips?.map((pip, index) => (
               <div key={pip.title} className="flex space-x-2 mb-8 items-center">
                 <div>{pip.title}</div>

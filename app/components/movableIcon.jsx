@@ -22,7 +22,7 @@ export default function Hero(props) {
     return (
         <Draggable nodeRef={nodeRef} bounds="parent">
             <div ref={nodeRef} style={{top:`${props.top}%`, left:`${props.left}%`}} className='w-[100px] m-8 select-none cursor-pointer' onTouchStart={handleDoubleClick} onDoubleClick={handleDoubleClick}>
-                <Image alt={props.name} src={props.img} width="64" height="64" className=' m-auto select-none pointer-events-none' />
+                <Image priority alt={props.name} src={props.img} width="64" height="64" className=' m-auto select-none pointer-events-none' />
                 <div className='text-center mt-4 text-superWhite win98popupText'>
                     {props.name}
                 </div>
