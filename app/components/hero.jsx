@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react';
 import Horse from './slap';
 import Draggable from 'react-draggable';
