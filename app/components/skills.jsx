@@ -123,7 +123,6 @@ export default function Skills({ skills }) {
             {selectedSkill.pips?.map((pip) => (
               <div key={pip.title} className="flex space-x-2 mb-8 items-center">
                 <div>{pip.title}</div>
-                <div>{pip.title}</div>
                 {Array(5)
                   .fill(0)
                   .map((_, i) => (
