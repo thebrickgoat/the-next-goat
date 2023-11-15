@@ -72,7 +72,6 @@ export default function Work({ work }) {
                 <h2 className="text-xl text-gray-800 font-bold mt-4">
                   {card.title}
                 </h2>
-                <p className="text-gray-600">{card.category}</p>
                 <p className="mt-2 text-gray-500">{card.body}</p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {card.categories.map((tag) => (
