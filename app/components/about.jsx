@@ -6,9 +6,9 @@ export default function About() {
   return (
     <section
       id="About"
-      className="relative scroll-mt-16 py-16 px-8 text-white h-screen"
+      className="relative scroll-mt-16 py-14 px-8 text-white h-screen"
     >
-      <h2 className="pb-4 relative font-bold text-6xl z-20">ABOUT ME</h2>
+      <h2 className="border-4 border-white w-max p-4 relative font-bold text-6xl z-20">ABOUT ME</h2>
       <div className="absolute top-0 left-0 w-full h-full bg-white z-10">
         <MyThreeComponent />
       </div>

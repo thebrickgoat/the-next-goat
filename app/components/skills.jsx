@@ -70,15 +70,15 @@ export default function Skills({ skills }) {
   return (
     <section
       id="Skills"
-      className={`scroll-mt-16 py-16 px-8 text-white bg-skills-500 bg-skillLogo ${
+      className={`scroll-mt-16 py-14 px-8 text-white bg-skills-500 bg-skillLogo ${
         selectedSkill.title ? "border-about-500" : ""
       }`}
     >
-      <h2 className="pb-4 font-bold text-6xl">SKILLSET</h2>
+      <h2 className="pb-4 border-4 border-skills-900 bg-skills-800/75 p-4 w-max font-bold text-6xl">SKILLSET</h2>
       <div className="w-full">
       </div>
-      <div className="md:flex items-center gap-8 pt-8">
-        <div className="flex flex-col w-full md:w-1/2 border-4 bg-skills-800/75 border-skills-900 p-8">
+      <div className="md:flex items-stretch gap-8 pt-8">
+        <div className="flex flex-col w-full h-full md:w-1/2 border-4 bg-skills-800/75 border-skills-900 p-8">
           <div className="relative min-h-[250px] mx-auto">
             <Image
               src={selectedSkill.image}
@@ -137,8 +137,8 @@ export default function Skills({ skills }) {
             ))}
           </div>
         </div>
-        <div className="flex-col w-full md:w-1/2">
-          <h2 className="pb-8 text-4xl">
+        <div className="flex-col items-strech w-full md:w-1/2">
+          <div className="pb-8 text-4xl">
             <Image
               src="/skills/choose.png"
               alt={selectedSkill.title}
@@ -146,7 +146,7 @@ export default function Skills({ skills }) {
               height={36}
               className="object-cover m-auto w-3/4"
             />
-          </h2>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
             {skills.map((skill, index) => (
               <Skill
