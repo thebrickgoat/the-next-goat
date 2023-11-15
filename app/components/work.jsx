@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Work({ work }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const categories = work.map((card) => card.categories.toLowerCase()); 
+  const categories = work.map((card) => card.categories.map((category) => category.toLowerCase())); 
   const uniqueCategories = [...new Set(categories.flat())];
 
   return (
