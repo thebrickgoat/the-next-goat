@@ -70,15 +70,15 @@ export default function Skills({ skills }) {
   return (
     <section
       id="Skills"
-      className={`scroll-mt-16 py-14 px-8 text-white bg-skills-500 bg-skillLogo ${
+      className={`scroll-mt-16 p-8 text-white bg-skills-500 bg-skillLogo ${
         selectedSkill.title ? "border-about-500" : ""
       }`}
     >
-      <h2 className="pb-4 border-4 border-skills-900 bg-skills-800/75 p-4 w-max font-bold text-6xl">SKILLSET</h2>
+      <h2 className="pb-4 border-4 border-skills-900 bg-skills-800/75 p-4 w-fit	font-bold text-3xl md:text-6xl">SKILLSET</h2>
       <div className="w-full">
       </div>
       <div className="md:flex items-stretch gap-8 pt-8">
-        <div className="flex flex-col w-full h-full md:w-1/2 border-4 bg-skills-800/75 border-skills-900 p-8">
+        <div className="flex flex-col w-full h-full mb-8 md:mb-0 md:w-1/2 border-4 bg-skills-800/75 border-skills-900 p-8">
           <div className="relative min-h-[250px] mx-auto">
             <Image
               src={selectedSkill.image}

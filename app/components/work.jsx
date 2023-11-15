@@ -10,8 +10,8 @@ export default function Work({ work }) {
 
   return (
     <section id="Work" className="scroll-mt-16">
-      <div className="py-12 px-8 pb-8">
-        <h2 className="border-4 shadow-md border-black w-max p-4 font-bold text-6xl">
+      <div className="p-8">
+        <h2 className="border-4 shadow-md border-black w-fit p-4 font-bold text-3xl md:text-6xl">
           PROJECTS AND WORKS
         </h2>
       </div>
@@ -48,7 +48,7 @@ export default function Work({ work }) {
             : `bg-work-${5 + uniqueCategories.indexOf(selectedCategory)}00`
         }`}
       >
-        <div className="mx-auto py-16 px-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="mx-auto p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {work
             .filter(
               (card) =>
