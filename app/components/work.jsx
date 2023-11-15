@@ -11,7 +11,9 @@ export default function Work({ work }) {
   return (
     <section id="Work" className="scroll-mt-16">
       <div className="py-12 px-8 pb-8">
-        <h2 className="border-4 border-black w-max p-4 font-bold text-6xl">PROJECTS AND WORKS</h2>
+        <h2 className="border-4 shadow-md border-black w-max p-4 font-bold text-6xl">
+          PROJECTS AND WORKS
+        </h2>
       </div>
       <div className="hidden bg-work-100 bg-work-200 bg-work-300 bg-work-400 bg-work-500 bg-work-600 bg-work-700 bg-work-800 bg-work-900 "></div>
       <div className="flex flex-wrap gap-4 p-8 pt-0">
@@ -76,7 +78,13 @@ export default function Work({ work }) {
                   {card.categories.map((tag) => (
                     <span
                       key={tag}
-                      className={`px-2 py-1 bg-work-${5 + uniqueCategories.indexOf(selectedCategory)}00 text-white rounded-full text-xs text-gray-700`}
+                      className={`px-2 py-1 transition-color duration-500 ease-in-out ${
+                        selectedCategory === "All"
+                          ? "bg-work-800"
+                          : `bg-work-${
+                              5 + uniqueCategories.indexOf(selectedCategory)
+                            }00`
+                      } text-white rounded-full text-xs text-gray-700`}
                     >
                       {tag}
                     </span>
