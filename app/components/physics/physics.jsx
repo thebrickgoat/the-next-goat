@@ -3,7 +3,7 @@ import { MeshReflectorMaterial } from '@react-three/drei'
 import { Physics, usePlane } from '@react-three/cannon'
 import { Cursor } from './helpers/drag'
 import { Guy } from './guy'
-import { Mug, Chair, Table, Laptop } from './furniture'
+import { Mug, Chair, Table, Laptop, Me } from './furniture'
 import { useEffect, useRef, useState } from 'react'
 
 export default function App() {
@@ -38,7 +38,7 @@ export default function App() {
       <Physics isPaused={physicsEnabled} allowSleep={true} iterations={15} gravity={[0, -200, 0]}>
         <group position={[0, 0, 0]}>
           <Cursor />
-          <Guy position={[0, 35, -1]} rotation={[-Math.PI / 3, 0, 0]} />
+          <Guy position={[0, 50, -1]} rotation={[-Math.PI / 3, 0, 0]} />
           <Chair position={[0, 0, 0]} rotation={[0, -Math.PI / 1, 0]} />
           <Table position={[0, 0, -5]} />
           <Laptop position={[0, 2, -5]} />

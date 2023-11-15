@@ -4,6 +4,7 @@ import { useBox, useConeTwistConstraint } from '@react-three/cannon'
 import { createRagdoll } from './helpers/createRagdoll'
 import { useDragConstraint } from './helpers/drag'
 import { Block } from './helpers/block'
+import { useGLTF } from '@react-three/drei'
 
 const { shapes, joints } = createRagdoll(5.5, Math.PI / 16, Math.PI / 16, 0)
 const context = createContext()
@@ -42,10 +43,22 @@ function Face() {
   )
 }
 
-export function Guy(props) {
+export function Me({ config, children, render, name, ...props }) {
+  const gltf = useGLTF('/me.glb')
+  const { color, args, mass, position } = shapes[name]
+  const parent = useContext(context)
+  const [ref] = useBox(() => ({ mass, args, position, linearDamping: 0.99, ...props }))
+  useConeTwistConstraint(ref, parent, config)
+  const bind = useDragConstraint(ref)
+  return (
+    <primitive ref={ref} {...bind} dispose={null} object={gltf.scene} />
+  )
+}
+
+export function Guy({ config, children, render, name, ...props }) {
   return (
     <BodyPart name="upperBody" {...props}>
-      <BodyPart {...props} name="head" config={joints['neckJoint']} render={<Face />} />
+      <Me {...props} name="head" config={joints['neckJoint']} />
       <BodyPart {...props} name="upperLeftArm" config={joints['leftShoulder']}>
       </BodyPart>
       <BodyPart {...props} name="upperRightArm" config={joints['rightShoulder']}>

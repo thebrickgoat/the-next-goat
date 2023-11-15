@@ -131,8 +131,11 @@ export default function Skills({ skills }) {
           <div className="mt-4">
             <h3 className="pb-4 font-bold text-2xl">{selectedSkill.title}</h3>
             <h3 className="pb-4">{selectedSkill.description}</h3>
+            <p></p>
+            {console.log(selectedSkill)}
             {selectedSkill.pips?.map(pip => (
               <div key={pip.title} className="flex space-x-2 mb-8 items-center">
+                <div>{pip.title}</div>
                 <div>{pip.title}</div>
                 {Array(5)
                   .fill(0)
