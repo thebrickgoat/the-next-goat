@@ -35,7 +35,7 @@ export default function App() {
     <Canvas style={{ background: "#e12669" }} ref={canvasRef} dpr={[1, 2]} shadows camera={{ position: [-40, 40, 40], fov: 10, near: 1, far: 100 }}>
          <fog attach="fog" args={['#e12669', 60, 90]} />
       <ambientLight intensity={3} />
-      <Physics isPaused={physicsEnabled} allowSleep={true} iterations={15} gravity={[0, -200, 0]}>
+      <Physics isPaused={physicsEnabled} allowSleep={false} iterations={15} gravity={[0, -200, 0]}>
         <group position={[0, 0, 0]}>
           <Cursor />
           <Guy position={[0, 50, -1]} rotation={[-Math.PI / 3, 0, 0]} />

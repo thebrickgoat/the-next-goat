@@ -67,7 +67,7 @@ export default function Hero() {
       )}
 
       <div className="bg-windows-700 p-8 text-white">
-        <h1 className="font-windows font-bold tracking-wide text-4xl md:text-8xl mb-4">
+        <h1 className="font-windows font-bold tracking-wide text-6xl md:text-8xl mb-4">
           thebrickgoat
         </h1>
         <p className="font-windows text-2xl mb-8">
