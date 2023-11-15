@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Work({ work }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const categories = work.map((card) => card.categories);
+  const categories = work.map((card) => card.categories.toLowerCase()); 
   const uniqueCategories = [...new Set(categories.flat())];
 
   return (
@@ -85,7 +85,7 @@ export default function Work({ work }) {
                             }00`
                       } text-white rounded-full text-xs text-gray-700`}
                     >
-                      {tag}
+                      {tag.toLowerCase()}
                     </span>
                   ))}
                 </div>
