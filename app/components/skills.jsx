@@ -5,7 +5,6 @@ import Image from "next/image";
 import Skill from "./skill";
 
 export default function Skills({ skills }) {
-
   const [selectedSkill, setSelectedSkill] = useState(skills[0]);
   const [focusedIndex, setFocusedIndex] = useState(null);
 
@@ -77,16 +76,6 @@ export default function Skills({ skills }) {
     >
       <h2 className="pb-4 font-bold text-6xl">SKILLSET</h2>
       <div className="w-full">
-        <p>
-          I am a skilled developer adept in React, Vue, and Shopify and
-          seamlessly integrate these technologies to create top-notch user
-          experiences. I excel in building dynamic interfaces with React,
-          leverage Vue.js for modular components and efficient navigation, and
-          harness Shopify&apos;s capabilities for robust e-commerce solutions.
-          With a comprehensive skillset spanning coding, UX design, and
-          deployment workflows, this developer crafts cohesive digital
-          experiences that prioritize both functionality and aesthetics.
-        </p>
       </div>
       <div className="md:flex items-center gap-8 pt-8">
         <div className="flex flex-col w-full md:w-1/2 border-4 bg-skills-800/75 border-skills-900 p-8">
@@ -126,12 +115,12 @@ export default function Skills({ skills }) {
               height={100}
               className="bounce absolute left-8 top-24 z-10"
             />
-            <div className="skillShadow bg-skills-900" ></div>
+            <div className="skillShadow bg-skills-900"></div>
           </div>
           <div className="mt-4">
             <h3 className="pb-4 font-bold text-2xl">{selectedSkill.title}</h3>
             <h3 className="pb-4">{selectedSkill.description}</h3>
-            {selectedSkill.pips?.map(pip => (
+            {selectedSkill.pips?.map((pip) => (
               <div key={pip.title} className="flex space-x-2 mb-8 items-center">
                 <div>{pip.title}</div>
                 {Array(5)
