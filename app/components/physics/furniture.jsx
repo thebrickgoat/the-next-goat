@@ -1,12 +1,11 @@
 
-import * as THREE from 'three'
-import { useGLTF, SpotLight } from '@react-three/drei'
-import { useCompoundBody, useSphere, useCylinder, useDistanceConstraint, usePointToPointConstraint } from '@react-three/cannon'
+import { useGLTF } from '@react-three/drei'
+import { useCompoundBody, useCylinder } from '@react-three/cannon'
 import { Block } from './helpers/block'
 
 export function Chair(props) {
   const [ref] = useCompoundBody(() => ({
-    mass: 24,
+    mass: 0.25,
     linearDamping: 0.95,
     angularDamping: 0.95,
     shapes: [
@@ -30,24 +29,41 @@ export function Chair(props) {
     </group>
   )
 }
-
-export function Laptop(props) {
-
+export function Mouse(props) {
   const [ref] = useCompoundBody(() => ({
-    mass: 4,
+    mass: 0.25,
     linearDamping: 0.95,
     angularDamping: 0.95,
     shapes: [
-      { type: 'Box', mass: 10, position: [0, 0, 0], args: [3.1, 3.1, 0.5] },
-      { type: 'Box', mass: 10, position: [0, -1.75, 1.25], args: [3.1, 0.5, 3.1] },
+      { type: 'Box', mass: 1, position: [0, 0, 0], args: [1, 1, 0.5] },
+      { type: 'Box', mass: 1, position: [0, 0, 0], args: [1, 1  , 0.5] },
     ],
     ...props
   }))
   return (
     <group ref={ref}>
-      <Block color="grey" position={[0, 0, 0]} scale={[3.1, 3.1, 0.5]} />
-      <Block color="black" position={[0, .3, .3]} scale={[2, 2, 0.1]} />
-      <Block color="grey" position={[0, -1.75, 1.25]} scale={[3.1, 0.5, 3.1]} />
+      <Block color="black" position={[0, 0.25, .125]} scale={[.1, .2, 0.05]} />
+      <Block color="black "position={[0, 0, 0]} scale={[.75, 1, 0.25]} />
+    </group>
+  )
+}
+export function Laptop(props) {
+
+  const [ref] = useCompoundBody(() => ({
+    mass: 0.25,
+    linearDamping: 0.95,
+    angularDamping: 0.95,
+    shapes: [
+      { type: 'Box', mass: 10, position: [0, 0, 0], args: [3, 3, 0.5] },
+      { type: 'Box', mass: 10, position: [0, -1.75, 1.25], args: [3, 0.5, 3] },
+    ],
+    ...props
+  }))
+  return (
+    <group ref={ref}>
+      <Block color="#a7adba" position={[0, 0, 0]} scale={[3, 3, 0.5]} />
+      <Block color="#161e33" position={[0, .3, .3]} scale={[2.5, 2.2, 0.1]} />
+      <Block color="#a7adba" position={[0, -1.75, 1.25]} scale={[3, 0.5, 3]} />
     </group>
   )
 }
@@ -68,7 +84,7 @@ export function Mug(props) {
 
 export function Table(props) {
   const [table] = useCompoundBody(() => ({
-    mass: 54,
+    mass: 0.25,
     linearDamping: 0.95,
     angularDamping: 0.95,
     shapes: [

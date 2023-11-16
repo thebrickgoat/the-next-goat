@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const menuItems = ["Skills", "Work", "Contact", "About"];
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -31,27 +31,17 @@ export default function Header() {
           isMenuOpen ? "flex" : "hidden"
         } md:flex md:items-center w-full md:w-auto`}
       >
-        <a
-          onClick={toggleMenu}
-          href="#Skills"
-          className="text-2xl hover:text-gray-500 block md:inline-block"
-        >
-          skills
-        </a>
-        <a
-          onClick={toggleMenu}
-          href="#Work"
-          className="text-2xl hover:text-gray-500 block md:inline-block ml-4"
-        >
-          work
-        </a>
-        <a
-          onClick={toggleMenu}
-          href="#Contact"
-          className="text-2xl hover:text-gray-500 block md:inline-block ml-4"
-        >
-          contact
-        </a>
+        {menuItems.map((item) => (
+          <a
+            key={item}
+            onClick={toggleMenu}
+            href={`#${item}`}
+            className="text-2xl hover:text-gray-500 block md:inline-block ml-4"
+            >
+            {item.toLocaleLowerCase()}
+          </a>
+        ))
+        }
       </nav>
     </header>
   );
