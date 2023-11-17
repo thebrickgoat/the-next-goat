@@ -3,7 +3,7 @@ import React from "react";
 import Draggable from "react-draggable";
 import Image from "next/image";
 
-export default function Hero(props) {
+export default function Movable(props) {
   const nodeRef = React.useRef(null);
   const [lastClickTime, setLastClickTime] = React.useState(0);
 
@@ -25,7 +25,7 @@ export default function Hero(props) {
       <div
         ref={nodeRef}
         style={{ top: `${props.top}%`, left: `${props.left}%` }}
-        className="w-[100px] m-8 select-none cursor-pointer"
+        className="w-[100px] m-2 select-none cursor-pointer"
         onTouchStart={handleClick}
         onClick={handleClick}
       >

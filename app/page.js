@@ -29,11 +29,9 @@ export default async function Home() {
 
   return (
     <div>
-      <header>
-        <Header />
-      </header>
       <main>
         <Hero />
+        <Header />
         <About />
         <Skills skills={skills} />
         <Work work={work} />

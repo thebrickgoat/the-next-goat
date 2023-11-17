@@ -4,21 +4,53 @@ import React from "react";
 import Horse from "./slap";
 import Draggable from "react-draggable";
 import Movable from "./movableIcon";
+import Image from "next/image";
 
 import { useState } from "react";
 
 export default function Hero() {
+  const nodeRef = React.useRef(null);
   const [popupOpen, setShowPopup] = useState(true);
+  const [clippyOpen, setClippyOpen] = useState(true);
+  const [clippyText, setClippyText] = useState(
+    "Looks like  could use some help from a witty dev. Can I help you with that?"
+  );
+  const [clippyYesText, setClippyYesText] = useState("Yes");
+  const [clippyNoText, setClippyNoText] = useState("No");
+
   const closePopup = () => {
     setShowPopup(false);
   };
   const openPopup = () => {
     setShowPopup(true);
   };
-  const nodeRef = React.useRef(null);
+  const clippyClick = (answer) => {
+    if (answer == "Yes" || answer == "oh okay") {
+      const element = document.getElementById("Header");
+      element?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      if (answer == "...No") {
+        setClippyOpen(false);
+        setTimeout(() => {
+          setClippyOpen(true);
+          setClippyText(
+            "Looks like  could use some help from a witty dev. Can I help you with that?"
+          );
+          setClippyYesText("Yes");
+          setClippyNoText("No");
+        }, 3000);
+      } else {
+        setClippyText(
+          "Are sure? I have been told they are also quite handsome."
+        );
+        setClippyYesText("oh okay");
+        setClippyNoText("...No");
+      }
+    }
+  };
 
   return (
-    <section className="flex flex-col justify-space-around relative overflow-hidden z-40 bg-windows-700 min-h-screen">
+    <section className="flex flex-col justify-space-around relative overflow-hidden z-40 bg-windows-700 h-screen">
       <Movable img="/icons/about.png" name="About Me" link="About" />
       <Movable
         img="/icons/skills.png"
@@ -65,14 +97,51 @@ export default function Hero() {
           </div>
         </Draggable>
       )}
-
-      <div className="bg-windows-700 p-8 text-white">
-        <h1 className="font-windows font-bold tracking-wide text-5xl md:text-8xl mb-4 win98popupText">
-          thebrickgoat
-        </h1>
-        <p className="font-windows text-2xl mb-8 win98popupText">
-          im just out here trusting god 🙏
-        </p>
+      <div className="absolute bottom-14 right-3">
+        {clippyOpen && (
+          <div className="clippyBox">
+            {clippyText}
+            <div className="clippyBoxButtons flex justify-between mt-4 gap-2">
+              <div
+                className="clippyBoxButton"
+                onClick={() => clippyClick(clippyYesText)}
+              >
+                {clippyYesText}
+              </div>
+              <div
+                className="clippyBoxButton"
+                onClick={() => clippyClick(clippyNoText)}
+              >
+                {clippyNoText}
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="clippy">
+          <Image
+            alt="a clippy joke that im sure you were alive long enough ago to understand"
+            src="/clippy.gif"
+            width={150}
+            height={150}
+          />
+        </div>
+      </div>
+      <div className="windows98startbar absolute bottom-0 left-0 w-screen">
+        <button
+          aria-label="Navigate to the best content your little browser has ever seen"
+          className="startbutton flex items-center gap-2"
+        >
+          <Image
+            alt="thebrickgoat logo"
+            src="/logo.png"
+            width={25}
+            height={25}
+          />
+          The Brick Goat
+        </button>
+        <div>
+          <div></div>
+        </div>
       </div>
     </section>
   );
