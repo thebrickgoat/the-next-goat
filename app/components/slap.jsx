@@ -21,8 +21,12 @@ export default function Slap() {
 
     async function fetchSlaps() {
       const { data, error } = await supabase.from("slaps").select("*").single();
-      if (error) console.log("error", error);
-      if (data) setWorldSlaps(data.slaps);
+      if (error) {
+        console.log("error", error);
+      }
+      if (data) {
+        setWorldSlaps(data.slaps);
+      }
     }
     fetchSlaps();
   }, []);
@@ -32,8 +36,8 @@ export default function Slap() {
     const randomHorse = Math.random() < 0.2 ? horse : null;
     slap?.play();
     randomHorse?.play();
-    setSlaps(slaps + 1);
-    setWorldSlaps(wordSlaps + 1);
+    setSlaps((prevSlaps) => prevSlaps + 1);
+    setWorldSlaps((prevWordSlaps) => prevWordSlaps + 1);
     await supabase
       .from("slaps")
       .update({ slaps: wordSlaps + 1 })

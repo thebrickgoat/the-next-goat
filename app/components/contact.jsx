@@ -4,13 +4,22 @@ export default function Contact() {
       id="Contact"
       className="bg-black text-white scroll-mt-16 flex flex-col justify-center p-8"
     >
-      <h2 className="border-4 border-white p-4 mb-8 w-fit	font-bold text-3xl md:text-6xl">GET IN TOUCH</h2>
+      <h2 className="border-4 border-white p-4 mb-8 w-fit	font-bold text-3xl md:text-6xl">
+        GET IN TOUCH
+      </h2>
       <form
         name="contact"
         method="POST"
         data-netlify="true"
+        netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true" 
         className="w-full  bg-white shadow-2xl px-8 pt-6 pb-8"
       >
+        <p className="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -57,6 +66,8 @@ export default function Contact() {
           ></textarea>
         </div>
         <div className="flex items-center justify-between">
+        <div data-netlify-recaptcha="true"></div>
+
           <button
             className="bg-contact shadow-sm hover:bg-contact text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
             type="submit"
