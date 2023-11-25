@@ -128,7 +128,7 @@ export default function Hero() {
       </div>
       <div className="windows98startbar absolute bottom-0 left-0 w-screen">
         <button
-          aria-label="Navigate to the best content your little browser has ever seen"
+          aria-label="the brick goat"
           className="startbutton flex items-center gap-2"
         >
           <Image

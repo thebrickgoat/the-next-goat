@@ -53,7 +53,7 @@ export default function Work({ work }) {
                 card.categories.includes(selectedCategory)
             )
             .map((card) => (
-              <a href={card.link} key={card.id}>
+              <a href={card.link ? card.link : '#Work' } key={card.id}>
                 <div
                   className="flex flex-col p-4 shadow-2xl bg-white transition-opacity duration-500 ease-in-out"
                 >
