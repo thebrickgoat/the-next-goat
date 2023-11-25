@@ -12,7 +12,6 @@ export default function Contact() {
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        data-netlify-recaptcha="true" 
         className="w-full  bg-white shadow-2xl px-8 pt-6 pb-8"
       >
         <p className="hidden">
@@ -66,8 +65,6 @@ export default function Contact() {
           ></textarea>
         </div>
         <div className="flex items-center justify-between">
-        <div data-netlify-recaptcha="true"></div>
-
           <button
             className="bg-contact shadow-sm hover:bg-contact text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
             type="submit"
