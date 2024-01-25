@@ -27,6 +27,7 @@ export default function Contact() {
             Name
           </label>
           <input
+            required
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             name="name"
@@ -42,6 +43,7 @@ export default function Contact() {
             Email
           </label>
           <input
+            required
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             name="email"
@@ -57,6 +59,7 @@ export default function Contact() {
             Message
           </label>
           <textarea
+            required
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             name="message"
