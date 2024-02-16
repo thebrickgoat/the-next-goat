@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div id="Header" className="sticky shadow-md flex items-center bg-white text-black top-0 w-full py-4 px-8 flex justify-between flex-wrap gap-4 z-30">
-      <span className="text-2xl font-bold">thebrickgoat</span>
+      <a href="/" className="text-2xl font-bold">thebrickgoat</a>
       <button
         className="text-2xl hover:text-gray-500 md:hidden"
         onClick={toggleMenu}

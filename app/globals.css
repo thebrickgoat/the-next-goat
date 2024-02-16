@@ -16,10 +16,19 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.wysisyg-bar button {
+  @apply bg-white;
+  @apply text-black;
+  @apply border border-black;
+  @apply rounded-md;
+  @apply p-1;
+  @apply hover:bg-black;
+  @apply hover:text-white;
+}
+
+.wysisyg-bar .is-active{
+  @apply bg-black;
+  @apply text-white;
 }

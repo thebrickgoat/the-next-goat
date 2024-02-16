@@ -2,6 +2,7 @@ import Hero from "./components/hero";
 import Skills from "./components/skills";
 import Work from "./components/work";
 import About from "./components/about";
+import Blogs from "./components/blogs";
 import Contact from "./components/contact";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -17,15 +18,21 @@ async function getSkills() {
   if (error) console.log("error", error);
   if (data) return data;
 }
+
 async function getWork() {
   let { data, error } = await supabase.from("work_build").select("*");
   if (error) console.log("error", error);
   if (data) return data;
 }
-
+async function getBlogs() {
+  let { data, error } = await supabase.from("blogs").select("*");
+  if (error) console.log("error", error);
+  if (data) return data;
+}
 export default async function Home() {
   const skills = await getSkills();
   const work = await getWork();
+  const blogs = await getBlogs();
 
   return (
     <div>
@@ -35,6 +42,7 @@ export default async function Home() {
         <About />
         <Skills skills={skills} />
         <Work work={work} />
+        <Blogs blog={blogs} />
         <Contact />
       </main>
       <footer>
