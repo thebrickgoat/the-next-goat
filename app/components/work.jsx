@@ -20,7 +20,7 @@ export default function Work({ work }) {
         {uniqueCategories.map((button, i) => (
           <button
             key={button}
-            className={`px-4 font-bold uppercase py-2 shadow-md ${selectedCategory === button
+            className={`px-4 border-2 border-black font-bold uppercase py-2 shadow-md ${selectedCategory === button
                 ? `bg-work-${5 + i}00 text-white`
                 : "bg-white text-black"
               }`}
@@ -30,7 +30,7 @@ export default function Work({ work }) {
           </button>
         ))}
         <button
-          className={`px-4 font-bold uppercase py-2 shadow-md ${selectedCategory === "All"
+          className={`px-4 border-2 border-black font-bold uppercase py-2 shadow-md ${selectedCategory === "All"
               ? "bg-work-800 text-white"
               : "bg-white text-black"
             }`}
@@ -52,11 +52,11 @@ export default function Work({ work }) {
                 selectedCategory === "All" ||
                 card.categories.includes(selectedCategory)
             )
+            .sort((a, b) => (a.weight || 0) - (b.weight || 0))
             .map((card) => (
-              <a href={card.link ? card.link : '#Work' } key={card.id}>
-                <div
-                  className="flex flex-col p-4 shadow-2xl bg-white transition-opacity duration-500 ease-in-out"
-                >
+              <a href={card.link ? card.link : '#Work' } key={card.id} className="flex flex-col p-4 shadow-2xl bg-superWhite transition-opacity duration-500 ease-in-out"
+              >
+
                   {card.image && (
                     <Image
                       src={`/work/${card.image}`}
@@ -64,12 +64,13 @@ export default function Work({ work }) {
                       width={300}
                       height={300}
                       className="w-full object-cover"
+                      unoptimized={card.image.endsWith(".gif")}
                     />
                   )}
                   <h2 className="text-xl text-gray-800 font-bold mt-4">
                     {card.title}
                   </h2>
-                  <p className="mt-2 text-gray-500">{card.body}</p>
+                  <p className="mt-2 grow text-gray-500">{card.body}</p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {card.tags.map((tag) => (
                       <span
@@ -84,9 +85,7 @@ export default function Work({ work }) {
                       </span>
                     ))}
                   </div>
-                </div>
               </a>
-
             ))}
         </div>
       </div>

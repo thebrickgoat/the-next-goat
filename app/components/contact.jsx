@@ -2,17 +2,17 @@ export default function Contact() {
   return (
     <section
       id="Contact"
-      className="bg-black text-white scroll-mt-16 flex flex-col justify-center p-8"
+      className="bg-black text-superWhite scroll-mt-16 flex flex-col justify-center p-8"
     >
-      <h2 className="border-4 border-white p-4 mb-8 w-fit	font-bold text-3xl md:text-6xl">
+      <h2 className="border-4 border-superWhite p-4 mb-8 w-fit	font-bold text-3xl md:text-6xl">
         GET IN TOUCH
       </h2>
       <form
         name="contact"
         method="POST"
-        data-netlify="true"
+        data-netlify="true" 
         netlify-honeypot="bot-field"
-        className="w-full  bg-white shadow-2xl px-8 pt-6 pb-8"
+        className="w-full  bg-superWhite shadow-2xl px-8 pt-6 pb-8"
       >
         <p className="hidden">
           <label>
@@ -28,7 +28,7 @@ export default function Contact() {
           </label>
           <input
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow border-2 border-black appearance-non w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             name="name"
             type="text"
@@ -44,7 +44,7 @@ export default function Contact() {
           </label>
           <input
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow border-2 border-black appearance-non w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             name="email"
             type="email"
@@ -60,7 +60,7 @@ export default function Contact() {
           </label>
           <textarea
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow border-2 border-black appearance-non w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             name="message"
             placeholder="Your message"
@@ -69,7 +69,7 @@ export default function Contact() {
         </div>
         <div className="flex items-center justify-between">
           <button
-            className="bg-contact shadow-sm hover:bg-contact text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+            className="uppercase bg-contact shadow-sm hover:bg-contact text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Send
